@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<style>
+
+
+#locator { 
+    position: absolute; 
+    visibility: visible; 
+    right: 5%; top: 10%;
+
+   
+ }
+</style>
+
+<script type="text/javascript">
+    function incrementValue(id)
+    {
+        value = parseInt(document.getElementById(id).value);
+        value = isNaN(value) ? 0 : value;
+        if(value<10){
+            value++;
+                document.getElementById(id).value = value;
+             
+        }
+        sum();
+    }
+    function decrementValue(id)
+    {
+        var value = parseInt(document.getElementById(id).value);
+        value = isNaN(value) ? 0 : value;
+        if(value>1){
+            value--;
+                document.getElementById(id).value = value;
+               
+        }
+        sum();
+    }
+
+    function sum()
+    {
+  
+      
+        var total = parseInt(document.getElementById('number1').value) + 
+                    parseInt(document.getElementById('number2').value) +
+                    parseInt(document.getElementById('number3').value) +
+                    parseInt(document.getElementById('number4').value) ;
+      
+                    document.getElementById('tot').value = total;
+    }
+
+
+    </script>
+    
+
+<body>
+
+<!-- Header -->
+<div class="header">
+  <h1>Welcome to Food Waste Management Service</h1>
+
+</div>
+
+<!-- Photo Grid -->
+
+  
+<form  method = 'post' action = '.java'>
+
+
+   <div id="locator">
+        <img src="addcart.png" width="200" height="200"><br>
+        Total Items :  <input type="text" name="total" value="0"  size="5" id="tot" />
+   </div>
+    <div class="container1">   
+        <img src="1.jpg" width="200" height="200">
+    
+        <input type="button" onclick="decrementValue('number1')" value="-" />
+        <input type="text" name="quantity1" value="0" size="1" id="number1" />
+        <input type="button" onclick="incrementValue('number1')" value="+" />
+    </div><br>
+    
+    <div class="container2">   
+        <img src="3.jpeg" width="200" height="200">
+    
+        <input type="button" onclick="decrementValue('number2')" value="-" />
+        <input type="text" name="quantity2" value="0"  size="1" id="number2" />
+        <input type="button" onclick="incrementValue('number2')" value="+" />
+    </div><br>
+    
+    <div class="container3">   
+        <img src="11.jpg" width="200" height="200">
+    
+        <input type="button" onclick="decrementValue('number3')" value="-" />
+        <input type="text" name="quantity3" value="0"  size="1" id="number3" />
+        <input type="button" onclick="incrementValue('number3')" value="+" />
+    </div><br>
+    
+    <div class="container4">   
+        <img src="10.jpeg" width="200" height="200">
+    
+        <input type="button" onclick="decrementValue('number4')" value="-" />
+        <input type="text" name="quantity4" value="0"  size="1" id="number4" />
+        <input type="button" onclick="incrementValue('number4')" value="+" />
+    </div><br>
+</form>
+
+
+
+
+</body>
+</html>
